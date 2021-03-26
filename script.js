@@ -16,9 +16,11 @@ $("#textarea").click(function() {
 
 //When the button is clicked i want to save your sibliling with id textarea to local storage - figure out how to store multiple UserInput
 $('#saveBtn').on('click', function(){
-    var btnClicked = $(this).sibling('#textarea').val();
+    var btnClicked = $(this).prev().val();
     console.log($(this));
     console.log(btnClicked);
+
+    var hourlyInput =[];
 
     localStorage.setItem('UserInput', btnClicked );   
 
