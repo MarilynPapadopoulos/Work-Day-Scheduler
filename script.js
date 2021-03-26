@@ -4,32 +4,41 @@ var currentDate = moment();
 var displayCurrentDate = document.querySelector("#currentDay");
 displayCurrentDate.innerHTML = currentDate.format('dddd MMM Do YYYY');
 
-
-// Create 9 rows with a class="row", containing 3: col-2, col-8 class, button col-2 
-
-
+// Add time to time blocks
+// var nineOclock = moment().hour(9);
+// var displayNineOclock = document.querySelector("#nine-oclock");
+// displayNineOclock.innerHTML = nineOclock.format('h','mm','A');
 
 //For the middle column: 1.create a onclick () that adds text 2. create a function that checks the time. 
 
 $("#textarea").click(function() {
     console.log("clicked");
-})
-
-//Save button to save contents of text area to local storage
-
-$("#saveBtn").click(function(){
-    var text = $("#textarea").val();
-    console.log(text);
-    localStorage.setItem("UserInput", text);
 });
 
-// Get UserInput to remain after page refreshes
-localStorage.getItem("UserInput");
+//Save button to save contents of text area to local storage
+$(".saveBtn").on("click", function(){
+    var timeSlotId = $(this).id;
+    console.log($(this));
+    console.log(timeSlotId);
+});
 
-//create createTask() with taskList = $(<li) append to it addTask=$(<span).text.val
+
+
+// $("#saveBtn").click(function(){
+//     var text = $("#textarea").val();
+//     console.log(text);
+//     localStorage.setItem("UserInput", text);
+// });
+
+// Get UserInput to remain after page refreshes
+
+var valSaved = localStorage.getItem("UserInput");
+$("#textarea").val(valSaved);
+
 
 //Save the value inside each row that saves when you press button in third column ensuring that it saves after refresh
 
-// Add time to time blocks
+
+
 
 //if time is past, present or future, apply correct color
