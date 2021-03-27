@@ -135,31 +135,110 @@ $('.seventeen').val(valSaved);
 
 // Add time to time blocks
 
-var currentTime= moment();
-var nineoclock = moment(9).format('h');
-console.log(nineoclock);
+var currentTime= parseInt(moment().format('H'));
+
 
 var timeBlockNine = document.querySelector('.nine');
+var timeBlockTen = document.querySelector('.ten');
+var timeBlockEleven = document.querySelector('.eleven');
+var timeBlockTwelve = document.querySelector('.twelve');
+var timeBlockThirteen = document.querySelector('.thirteen');
+var timeBlockFourteen = document.querySelector('.fourteen');
+var timeBlockFifteen = document.querySelector('.fifteen');
+var timeBlockSixteen = document.querySelector('.sixteen');
+var timeBlockSeventeen = document.querySelector('.seventeen');
 
-if(moment().format('h').isSame(moment(nineoclock).format('h'))) {
-    timeBlockNine.addClass("present");
+if(currentTime === 9){
+    $(timeBlockNine).addClass('present');   
+}
+console.log(currentTime);
+if (currentTime < 9) {
     console.log("hello");
+    $(timeBlockNine).addClass('future');
+}
+if (currentTime > 9) {
+    $(timeBlockNine).addClass('past');
 }
 
 
+if(currentTime === 10){
+    $(timeBlockTen).addClass("present");
+    console.log(currentTime);
+}
+if (currentTime < 10) {
+    $(timeBlockTen).addClass("future");
+}
+if (currentTime > 10) {
+    $(timeBlockTen).addClass("past");
+}
 
 
+if(currentTime === 11){
+    $(timeBlockEleven).addClass("present");  
+}
+if (currentTime < 11) {
+    $(timeBlockEleven).addClass("future");
+}
+if (currentTime > 11) {
+    $(timeBlockEleven).addClass("past");
+}
 
+if(currentTime === 12){
+    $(timeBlockTwelve).addClass("present");    
+}
+if (currentTime < 12) {
+    $(timeBlockTwelve).addClass("future");
+}
+if (currentTime > 12) {
+    $(timeBlockTwelve).addClass("past");
+}
 
-// var nineOclock = moment().hour(9);
-// var displayNineOclock = document.querySelector("#nine-oclock");
-// displayNineOclock.innerHTML = nineOclock.format('h','mm','A');
+if(currentTime === 13){
+    $(timeBlockThirteen).addClass("present");   
+}
+if (currentTime < 13) {
+    $(timeBlockThirteen).addClass("future");
+}
+if (currentTime > 13) {
+    $(timeBlockThirteen).addClass("past");
+}
 
-//For the middle column: 1.create a onclick () that adds text 2. create a function that checks the time. 
+if(currentTime === 14){
+    $(timeBlockFourteen).addClass("present");   
+}
+if (currentTime < 14) {
+    $(timeBlockFourteen).addClass("future");
+}
+if (currentTime > 14) {
+    $(timeBlockFourteen).addClass("past");
+}
 
+if(currentTime === 15){
+    $(timeBlockFifteen).addClass("present"); 
+}
+if (currentTime < 15) {
+    $(timeBlockFifteen).addClass("future");
+}
+if (currentTime > 15) {
+    $(timeBlockFifteen).addClass("past");
+}
 
+if(currentTime === 16){
+    $(timeBlockSixteen).addClass("present");
+}
+if (currentTime < 16) {
+    $(timeBlockSixteen).addClass("future");
+}
+if (currentTime > 16) {
+    $(timeBlockSixteen).addClass("past");
+}
 
-
-
-
-//if time is past, present or future, apply correct color
+if(currentTime === 17){
+    $(timeBlockSeventeen).addClass("present");
+}
+if (currentTime < 17) {
+    $(timeBlockSeventeen).addClass("future");
+}
+if (currentTime > 17) {
+    $(timeBlockSeventeen).addClass("past");
+}
