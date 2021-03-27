@@ -39,7 +39,6 @@ var timeBlockSeventeen = document.querySelector('.seventeen');
 if(currentTime === 9){
     $(timeBlockNine).addClass('present');   
 }
-console.log(currentTime);
 if (currentTime < 9) {
     console.log("hello");
     $(timeBlockNine).addClass('future');
